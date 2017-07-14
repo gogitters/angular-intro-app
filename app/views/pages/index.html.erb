@@ -2,15 +2,17 @@
   {{ 1 + 1 }}
 
   <div ng-controller="stuffCtrl">
-<!--     <h1>{{ message }}</h1>
-    <h1>{{ message2 }}</h1>
-    <h1>{{ message3 }}</h1> -->
     <ul>
-      <li ng-repeat="task in tasks">{{ task }}</li>
+      <li ng-repeat="task in tasks">{{ task }} <div><input type="text" ng-model="task"></div></li>
     </ul>
+    
+    <h3>Add your task</h3>
+    <input type="text" ng-model="newTask">
+    <button ng-click="addTask(newTask)">Add New Task</button>
+
     <!-- <div>{{ tasks }}</div> -->
 
-    <input ng-model="message3">
+    <!-- <input ng-model="message3"> -->
   </div>
 </div>
 
